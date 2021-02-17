@@ -87,16 +87,6 @@ enum flat_binder_object_flags {
 	 * scheduling policy from the caller (for synchronous transactions).
 	 */
 	FLAT_BINDER_FLAG_INHERIT_RT = 0x800,
-#ifdef __KERNEL__
-
-	/**
-	 * @FLAT_BINDER_FLAG_TXN_SECURITY_CTX: request security contexts
-	 *
-	 * Only when set, causes senders to include their security
-	 * context
-	 */
-	FLAT_BINDER_FLAG_TXN_SECURITY_CTX = 0x1000,
-#endif /* __KERNEL__ */
 };
 
 #ifdef BINDER_IPC_32BIT
