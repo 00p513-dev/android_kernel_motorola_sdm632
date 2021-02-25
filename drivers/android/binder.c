@@ -569,6 +569,7 @@ struct binder_proc {
 	struct binder_context *context;
 	spinlock_t inner_lock;
 	spinlock_t outer_lock;
+  struct mutex files_lock;
 };
 
 enum {
